@@ -1,0 +1,161 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #faf7f3;
+}
+h2 {
+  color: #603f26;
+}
+.navbar {
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 40px;
+}
+.navbar a {
+  position: relative;
+  color: #543310;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #696761;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search input,
+.search select {
+  padding: 8px;
+  width: 300px;
+  border: 2px solid #603f26;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.search button {
+  background-color: #d9a299;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.search button:hover {
+  background-color: #b88a8a;
+}
+.poem-grid-container h2 {
+  color: #6c4e31;
+}
+
+.poem-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  margin: 20px 20px;
+}
+
+.poem-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #603f26;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.poem-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.poem-card pre {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+.poem-card h4 {
+  color: #6c4e31;
+}
+
+.poem-card p {
+  color: #6c4e31;
+}
+
+.poem-card pre {
+  color: #6c4e31;
+}
+
+.poem-grid-container h2 {
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+  font-size: 20px;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.modal-content pre {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: -10px;
+}
